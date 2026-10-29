@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mia Raytman (@.rtm) | Bio Link</title>
+  <meta name="description" content="Mia Raytman — 19 y.o., USC, Los Angeles. Bio, dance archives & mood diary.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a82846'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>">
+
+  <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===================================================================
+       THEME: DARK BURGUNDY & VELVET NOIR
+       Tailored for Mia Raytman (@.rtm)
+       =================================================================== */
+    :root {
+      /* ── Burgundy Palette ── */
+      --primary-color: #a82846;       /* Deep rich burgundy */
+      --primary-hover: #c43358;       /* Glowing berry */
+      --primary-subtle: rgba(168, 40, 70, 0.25);
+      --accent-glow: rgba(196, 51, 88, 0.4);
+      --rose-gold: #e2a8b2;           /* Rose gold soft accent */
+
+      /* ── Background & Canvas ── */
+      --page-bg: #0c0407;
+      --mesh-color-1: #3b0713;
+      --mesh-color-2: #21030b;
+      --mesh-color-3: #4a0d1b;
+
+      /* ── Glassmorphism Card ── */
+      --card-bg: rgba(24, 7, 13, 0.72);
+      --card-border: rgba(226, 168, 178, 0.18);
+      --card-blur: 24px;
+
+      /* ── Buttons & Links ── */
+      --btn-bg: rgba(255, 255, 255, 0.04);
+      --btn-border: rgba(226, 168, 178, 0.14);
+      --btn-hover-bg: rgba(168, 40, 70, 0.25);
+      --btn-hover-border: rgba(226, 168, 178, 0.55);
+      --btn-text: #fff5f6;
+
+      /* ── Typography Colors ── */
+      --text-main: #fff0f2;
+      --text-muted: #c9a4ac;
+      --text-subtle: #7a545c;
+
+      /* ── Shadows & Radii ── */
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 28px;
+      --radius-full: 9999px;
+      --shadow-card: 0 24px 50px -10px rgba(0, 0, 0, 0.85), 0 0 45px rgba(168, 40, 70, 0.18);
+      --shadow-btn: 0 4px 16px rgba(0, 0, 0, 0.35);
+      --transition-base: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      background-color: var(--page-bg);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 32px 16px;
+      position: relative;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    /* Ambient Background Mesh */
+    .bg-mesh {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .mesh-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.65;
+      animation: float 20s ease-in-out infinite alternate;
+    }
+
+    .mesh-1 {
+      width: 520px;
+      height: 520px;
+      background: var(--mesh-color-1);
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .mesh-2 {
+      width: 440px;
+      height: 440px;
+      background: var(--mesh-color-2);
+      bottom: -80px;
+      left: 5%;
+      animation-duration: 24s;
+    }
+
+    .mesh-3 {
+      width: 360px;
+      height: 360px;
+      background: var(--mesh-color-3);
+      top: 45%;
+      right: 5%;
+      animation-duration: 28s;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px) scale(1); }
+      100% { transform: translateY(30px) scale(1.1); }
+    }
+
+    /* Main Container Card */
+    .profile-card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 490px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(var(--card-blur));
+      -webkit-backdrop-filter: blur(var(--card-blur));
+      border-radius: var(--radius-lg);
+      padding: 44px 28px 36px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: cardAppear 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes cardAppear {
+      from {
+        opacity: 0;
+        transform: translateY(22px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Top Action Bar (Share) */
+    .top-actions {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 10;
+    }
+
+    .icon-button {
+      background: var(--btn-bg);
+      border: 1px solid var(--btn-border);
+      color: var(--text-muted);
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-base);
+      outline: none;
+    }
+
+    .icon-button:hover, .icon-button:active {
+      background: var(--primary-subtle);
+      color: var(--text-main);
+      transform: scale(1.1);
+      border-color: var(--btn-hover-border);
+      box-shadow: 0 0 16px var(--accent-glow);
+    }
+
+    /* Header & Centered Avatar */
+    .profile-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+    }
+
+    .avatar-wrapper {
+      position: relative;
+      width: 114px;
+      height: 114px;
+      margin: 0 auto 18px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .avatar-glow {
+      position: absolute;
+      inset: -4px;
+      background: linear-gradient(135deg, var(--primary-color), var(--rose-gold));
+      border-radius: var(--radius-full);
+      filter: blur(10px);
+      opacity: 0.65;
+      transition: opacity var(--transition-base);
+    }
+
+    .avatar-wrapper:hover .avatar-glow {
+      opacity: 0.95;
+      filter: blur(14px);
+    }
+
+    .avatar-img {
+      position: relative;
+      width: 114px;
+      height: 114px;
+      border-radius: var(--radius-full);
+      object-fit: cover;
+      object-position: center 25%;
+      border: 2px solid rgba(255, 240, 242, 0.4);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+      transition: transform var(--transition-base);
+      display: block;
+    }
+
+    .avatar-wrapper:hover .avatar-img {
+      transform: scale(1.03);
+    }
+
+    .status-badge {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      width: 16px;
+      height: 16px;
+      background-color: #10b981;
+      border: 3px solid var(--page-bg);
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(16, 185, 129, 0.7);
+      z-index: 2;
+    }
+
+    /* Profile Identity */
+    .profile-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+
+    .profile-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .profile-handle {
+      font-size: 0.95rem;
+      color: var(--rose-gold);
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .info-pill {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      letter-spacing: 0.02em;
+    }
+
+    .profile-bio {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      max-width: 400px;
+      margin-bottom: 22px;
+      line-height: 1.6;
+    }
+
+    /* ===================================================================
+       PURE NATIVE AUDIO PLAYER CARD (California Gurls)
+       Clean, aesthetic & 100% video-free!
+       =================================================================== */
+    .music-player-card {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, rgba(59, 7, 19, 0.55) 0%, rgba(20, 5, 10, 0.7) 100%);
+      border: 1px solid rgba(226, 168, 178, 0.22);
+      border-radius: var(--radius-md);
+      text-align: left;
+      cursor: pointer;
+      user-select: none;
+      transition: all var(--transition-base);
+    }
+
+    .music-player-card:hover {
+      border-color: rgba(226, 168, 178, 0.55);
+      box-shadow: 0 8px 24px var(--accent-glow);
+      transform: translateY(-2px);
+    }
+
+    .player-thumb-wrapper {
+      position: relative;
+      width: 52px;
+      height: 52px;
+      flex-shrink: 0;
+    }
+
+    .player-thumb {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      display: block;
+    }
+
+    .play-overlay-btn {
+      position: absolute;
+      inset: 0;
+      background: rgba(12, 4, 7, 0.45);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      transition: all var(--transition-base);
+    }
+
+    .music-player-card:hover .play-overlay-btn {
+      background: rgba(168, 40, 70, 0.6);
+      transform: scale(1.05);
+    }
+
+    .player-details {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .player-status-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2px;
+    }
+
+    .player-badge {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--rose-gold);
+      font-weight: 700;
+    }
+
+    .player-song {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .player-artist {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Soundwave Graphic */
+    .soundwave {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      height: 16px;
+    }
+
+    .soundwave-bar {
+      width: 3px;
+      background-color: var(--rose-gold);
+      border-radius: 2px;
+      height: 6px;
+      transition: transform 0.2s ease;
+    }
+
+    .playing .soundwave-bar {
+      animation: soundwaveBounce 1.1s ease-in-out infinite alternate;
+    }
+
+    .playing .soundwave-bar:nth-child(1) { height: 6px; animation-delay: 0.1s; }
+    .playing .soundwave-bar:nth-child(2) { height: 16px; animation-delay: 0.3s; }
+    .playing .soundwave-bar:nth-child(3) { height: 10px; animation-delay: 0.2s; }
+    .playing .soundwave-bar:nth-child(4) { height: 14px; animation-delay: 0.4s; }
+
+    @keyframes soundwaveBounce {
+      0% { transform: scaleY(0.4); opacity: 0.5; }
+      100% { transform: scaleY(1.15); opacity: 1; }
+    }
+
+    .player-toggle-btn {
+      background: var(--primary-color);
+      color: #ffffff;
+      border: none;
+      padding: 7px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all var(--transition-base);
+      flex-shrink: 0;
+    }
+
+    .player-toggle-btn:hover {
+      background: var(--primary-hover);
+      box-shadow: 0 0 16px var(--accent-glow);
+      transform: scale(1.05);
+    }
+
+    /* Social Icons Row */
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      width: 100%;
+    }
+
+    .social-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-full);
+      background: var(--btn-bg);
+      border: 1px solid var(--btn-border);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all var(--transition-base);
+    }
+
+    .social-btn:hover {
+      background: var(--primary-color);
+      color: #ffffff;
+      border-color: transparent;
+      transform: translateY(-3px) scale(1.08);
+      box-shadow: 0 8px 20px var(--accent-glow);
+    }
+
+    .social-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* Links List */
+    .links-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .link-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 56px;
+      padding: 14px 20px;
+      background: var(--btn-bg);
+      border: 1px solid var(--btn-border);
+      border-radius: var(--radius-md);
+      color: var(--btn-text);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      box-shadow: var(--shadow-btn);
+      transition: all var(--transition-base);
+      cursor: pointer;
+    }
+
+    .link-content {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+    }
+
+    .link-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      color: var(--rose-gold);
+      flex-shrink: 0;
+      transition: transform var(--transition-base);
+    }
+
+    .link-title {
+      flex: 1;
+      text-align: left;
+    }
+
+    .link-arrow {
+      color: var(--text-subtle);
+      transition: all var(--transition-base);
+      flex-shrink: 0;
+    }
+
+    .link-item:hover {
+      background: var(--btn-hover-bg);
+      border-color: var(--btn-hover-border);
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
+    }
+
+    .link-item:hover .link-icon {
+      transform: scale(1.15);
+      color: #ffffff;
+    }
+
+    .link-item:hover .link-arrow {
+      color: var(--text-main);
+      transform: translateX(4px);
+    }
+
+    /* Featured Link */
+    .link-item.featured {
+      background: linear-gradient(135deg, rgba(168, 40, 70, 0.35) 0%, rgba(68, 11, 23, 0.45) 100%);
+      border: 1px solid rgba(226, 168, 178, 0.4);
+      box-shadow: 0 8px 24px rgba(168, 40, 70, 0.25);
+    }
+
+    .link-item.featured::before {
+      content: 'FEATURED ✨';
+      position: absolute;
+      top: -9px;
+      right: 18px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 2px 9px;
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+      color: #ffffff;
+      box-shadow: 0 2px 10px var(--accent-glow);
+    }
+
+    /* Footer */
+    .footer {
+      font-size: 0.8rem;
+      color: var(--text-subtle);
+      margin-top: auto;
+      letter-spacing: 0.02em;
+    }
+
+    /* Toast Notification (Reliable Popup) */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(30px);
+      background: rgba(30, 8, 16, 0.96);
+      border: 1px solid var(--rose-gold);
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7), 0 0 20px var(--accent-glow);
+      backdrop-filter: blur(12px);
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+      pointer-events: auto;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 18px 12px;
+      }
+      .profile-card {
+        padding: 36px 18px 26px;
+        border-radius: var(--radius-md);
+      }
+      .avatar-wrapper {
+        width: 104px;
+        height: 104px;
+      }
+      .avatar-img {
+        width: 104px;
+        height: 104px;
+      }
+      .profile-name {
+        font-size: 1.45rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Native HTML5 Audio Player (Zero YouTube dependencies, plays local audio file) -->
+  <audio id="bgAudio" loop preload="auto">
+    <source src="./California%20Gurls.mp3" type="audio/mpeg">
+    <source src="./music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Background Mesh Blobs -->
+  <div class="bg-mesh" aria-hidden="true">
+    <div class="mesh-blob mesh-1"></div>
+    <div class="mesh-blob mesh-2"></div>
+    <div class="mesh-blob mesh-3"></div>
+  </div>
+
+  <!-- Main Card -->
+  <main class="profile-card">
+    <!-- Share Button -->
+    <div class="top-actions">
+      <button class="icon-button" id="shareBtn" aria-label="Share profile" title="Share profile">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3"></circle>
+          <circle cx="6" cy="12" r="3"></circle>
+          <circle cx="18" cy="19" r="3"></circle>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Profile Header (Fully Centered & English) -->
+    <header class="profile-header">
+      <div class="avatar-wrapper">
+        <div class="avatar-glow"></div>
+        <img id="userAvatar" class="avatar-img" src="./avatar.jpg" alt="Mia Raytman">
+        <div class="status-badge" aria-label="In my zone" title="In my zone ✨"></div>
+      </div>
+
+      <h1 class="profile-name">Mia Raytman</h1>
+
+      <div class="profile-meta">
+        <span class="profile-handle">@.rtm )</span>
+        <span class="info-pill">19 y.o.</span>
+        <span class="info-pill">USC 📍 LA</span>
+      </div>
+
+      <p class="profile-bio">
+        19, USC freshman in Los Angeles. Living at my own pace — more movement, fewer words. Expressing through dance, music, and the vibe of the frame :)
+      </p>
+    </header>
+
+    <!-- CLEAN NATIVE MUSIC PLAYER (California Gurls) -->
+    <section class="music-player-card" id="musicPlayer" role="button" tabindex="0" aria-label="Play California Gurls track">
+      <div class="player-thumb-wrapper">
+        <img src="./mood.jpg" alt="Bunny with AirPods" class="player-thumb">
+        <div class="play-overlay-btn" id="playBtnOverlay">
+          <svg id="svgPlay" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <svg id="svgPause" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+          </svg>
+        </div>
+      </div>
+
+      <div class="player-details">
+        <div class="player-status-row">
+          <span class="player-badge" id="playerStatusText">▶ Tap to play</span>
+          <div class="soundwave" id="soundwaveVisualizer" aria-hidden="true">
+            <span class="soundwave-bar"></span>
+            <span class="soundwave-bar"></span>
+            <span class="soundwave-bar"></span>
+            <span class="soundwave-bar"></span>
+          </div>
+        </div>
+        <div class="player-song">California Gurls 🌴</div>
+        <div class="player-artist">Katy Perry ft. Snoop Dogg</div>
+      </div>
+
+      <button class="player-toggle-btn" id="playerToggleBtn" type="button">
+        Play
+      </button>
+    </section>
+
+    <!-- Social Media Row (Spotify & Pinterest reserved for future) -->
+    <section class="social-links" id="socialLinksContainer" aria-label="Social profiles"></section>
+
+    <!-- Bio Links -->
+    <section class="links-list" id="linksContainer" aria-label="Bio links"></section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footerContainer"></footer>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="alert" aria-live="polite">
+    <span>✨ Profile link copied to clipboard!</span>
+  </div>
+
+  <!-- ===================================================================
+       JAVASCRIPT CONFIGURATION & NATIVE SOUND ENGINE
+       =================================================================== -->
+  <script>
+    /* =================================================================
+       👉 MIA RAYTMAN CONFIGURATION (100% English) 👈
+       ================================================================= */
+    const userData = {
+      profile: {
+        name: "Mia Raytman",
+        handle: "@.rtm )",
+        age: "19 y.o.",
+        location: "USC 📍 LA",
+        bio: "19, USC freshman in Los Angeles. Living at my own pace — more movement, fewer words. Expressing through dance, music, and the vibe of the frame :)",
+        avatar: "./avatar.jpg"
+      },
+
+      // Active Social Profiles
+      socials: [
+        { platform: "tiktok", url: "https://tiktok.com", label: "TikTok" },
+        { platform: "instagram", url: "https://instagram.com", label: "Instagram" },
+        { platform: "telegram", url: "https://t.me", label: "Telegram" }
+
+        /* ============================================================
+           📌 RESERVED FOR FUTURE (Uncomment whenever needed):
+           { platform: "spotify", url: "https://spotify.com", label: "Spotify" },
+           { platform: "pinterest", url: "https://pinterest.com", label: "Pinterest" },
+           ============================================================ */
+      ],
+
+      // Main Links
+      links: [
+        {
+          title: "🩰 Dance Archives & Choreo Snippets",
+          url: "https://tiktok.com",
+          icon: "sparkles",
+          featured: true
+        },
+        {
+          title: "🎞️ 35mm Film Diary: LA & Campus Days",
+          url: "https://vsco.co",
+          icon: "camera",
+          featured: false
+        },
+        {
+          title: "💌 Say Hi / Telegram DM (@.rtm)",
+          url: "https://t.me",
+          icon: "chat",
+          featured: false
+        }
+
+        /* ============================================================
+           📌 RESERVED FOR FUTURE (Uncomment whenever needed):
+           {
+             title: "🎧 Spotify: Heavy Rotation Playlist",
+             url: "https://spotify.com",
+             icon: "music",
+             featured: false
+           },
+           {
+             title: "☕ Pinterest Moodboards & Aesthetics",
+             url: "https://pinterest.com",
+             icon: "heart",
+             featured: false
+           }
+           ============================================================ */
+      ],
+
+      footerText: "© 2026 Mia Raytman (@.rtm) • All moments curated."
+    };
+
+    /* =================================================================
+       SVG ICONS
+       ================================================================= */
+    const ICONS = {
+      instagram: `<svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>`,
+      tiktok: `<svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>`,
+      telegram: `<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>`,
+      sparkles: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>`,
+      camera: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>`,
+      chat: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`,
+      arrowRight: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>`
+    };
+
+    /* =================================================================
+       RENDER ENGINE
+       ================================================================= */
+    function renderBioLink(data) {
+      // 1. Socials
+      const socialsContainer = document.getElementById("socialLinksContainer");
+      socialsContainer.innerHTML = "";
+      data.socials.forEach(social => {
+        const a = document.createElement("a");
+        a.className = "social-btn";
+        a.href = social.url;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.setAttribute("aria-label", social.label || social.platform);
+        a.title = social.label || social.platform;
+        a.innerHTML = ICONS[social.platform.toLowerCase()] || "";
+        socialsContainer.appendChild(a);
+      });
+
+      // 2. Links
+      const linksContainer = document.getElementById("linksContainer");
+      linksContainer.innerHTML = "";
+      data.links.forEach(link => {
+        const a = document.createElement("a");
+        a.className = `link-item ${link.featured ? "featured" : ""}`;
+        a.href = link.url;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+
+        const iconSvg = ICONS[link.icon] || ICONS.sparkles;
+
+        a.innerHTML = `
+          <div class="link-content">
+            <span class="link-icon">${iconSvg}</span>
+            <span class="link-title">${link.title}</span>
+          </div>
+          <span class="link-arrow">${ICONS.arrowRight}</span>
+        `;
+        linksContainer.appendChild(a);
+      });
+
+      // 3. Footer
+      document.getElementById("footerContainer").innerHTML = data.footerText;
+    }
+
+    /* =================================================================
+       NATIVE AUDIO PLAYER ENGINE (Plays ./music.mp3 directly!)
+       Zero YouTube blocks, pure audio file playback!
+       ================================================================= */
+    let isAudioPlaying = false;
+    const bgAudio = document.getElementById("bgAudio");
+    const musicPlayer = document.getElementById("musicPlayer");
+    const svgPlay = document.getElementById("svgPlay");
+    const svgPause = document.getElementById("svgPause");
+    const playerStatusText = document.getElementById("playerStatusText");
+    const playerToggleBtn = document.getElementById("playerToggleBtn");
+
+    // Comfortable listening volume
+    bgAudio.volume = 0.45;
+
+    function togglePlayback() {
+      if (isAudioPlaying) {
+        pauseAudio();
+      } else {
+        playAudio();
+      }
+    }
+
+    function playAudio() {
+      const playPromise = bgAudio.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          isAudioPlaying = true;
+          musicPlayer.classList.add("playing");
+          svgPlay.style.display = "none";
+          svgPause.style.display = "block";
+          playerStatusText.textContent = "⏸ Playing...";
+          playerToggleBtn.textContent = "Pause";
+        }).catch(err => {
+          console.log("Audio play gesture required:", err);
+        });
+      }
+    }
+
+    function pauseAudio() {
+      isAudioPlaying = false;
+      bgAudio.pause();
+      musicPlayer.classList.remove("playing");
+      svgPlay.style.display = "block";
+      svgPause.style.display = "none";
+      playerStatusText.textContent = "▶ Tap to play";
+      playerToggleBtn.textContent = "Play";
+    }
+
+    musicPlayer.addEventListener("click", togglePlayback);
+    playerToggleBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      togglePlayback();
+    });
+
+    // Auto-play softly on first tap anywhere
+    let firstInteraction = false;
+    function handleFirstUserTap() {
+      if (!firstInteraction) {
+        firstInteraction = true;
+        if (!isAudioPlaying) {
+          playAudio();
+        }
+      }
+    }
+    document.addEventListener("click", handleFirstUserTap, { once: true });
+    document.addEventListener("touchstart", handleFirstUserTap, { once: true });
+
+    /* =================================================================
+       SHARE & CLIPBOARD (100% Reliable in all browsers)
+       ================================================================= */
+    function showToast(text) {
+      const toast = document.getElementById("toast");
+      if (text) toast.querySelector("span").textContent = text;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2800);
+    }
+
+    function copyToClipboard(textToCopy) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          showToast("✨ Profile link copied to clipboard!");
+        }).catch(() => {
+          fallbackCopyText(textToCopy);
+        });
+      } else {
+        fallbackCopyText(textToCopy);
+      }
+    }
+
+    function fallbackCopyText(text) {
+      try {
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        textArea.style.top = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        const success = document.execCommand("copy");
+        document.body.removeChild(textArea);
+        if (success) {
+          showToast("✨ Profile link copied to clipboard!");
+        } else {
+          prompt("Copy this profile link:", text);
+        }
+      } catch (err) {
+        prompt("Copy this profile link:", text);
+      }
+    }
+
+    document.getElementById("shareBtn").addEventListener("click", (e) => {
+      e.stopPropagation();
+      const currentUrl = window.location.href;
+
+      if (navigator.share && window.location.protocol.startsWith("http")) {
+        navigator.share({
+          title: "Mia Raytman (@.rtm)",
+          text: "19, USC freshman in Los Angeles. Living at my own pace :)",
+          url: currentUrl
+        }).catch(() => {
+          copyToClipboard(currentUrl);
+        });
+      } else {
+        copyToClipboard(currentUrl);
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderBioLink(userData);
+    });
+  </script>
+</body>
+</html>
